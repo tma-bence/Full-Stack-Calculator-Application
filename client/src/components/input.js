@@ -74,14 +74,20 @@ const Input = () => {
 
         return(
             <Fragment>
-                <form className="d-flex">
-                    <input type="text" id="num" value={data} onChange={e => setData(e.target.value)}></input>
-                    <button className="btn btn-success ml-2" onClick={onCalculate}>Calculate</button>
-                    <button className="btn btn-success ml-2" onClick={clearField}>Clear</button>
-                    <button className="btn btn-success ml-2" onClick={memoryAdd}>M+</button>
-                    <button className="btn btn-success ml-2" onClick={memoryClear}>M-</button>
-                    <button className="btn btn-success ml-2" onClick={memoryRead}>Mr</button>
-                </form>
+                <div className="container">
+                    <div className="row">
+                        <form className="d-flex">
+                            <input type="text" id="num" value={data} onChange={e => setData(e.target.value)}></input>
+                            <button className="btn btn-primary ml-2" onClick={onCalculate}>Calculate</button>
+                            <button className="btn btn-secondary ml-2" onClick={clearField}>Clear</button>
+                        </form>
+                    </div>
+                    <div className="row mt-2">
+                        <button className="btn btn-secondary" onClick={memoryAdd}>M+</button>
+                        <button className="btn btn-secondary ml-2" onClick={memoryClear}>M-</button>
+                        <button className="btn btn-secondary ml-2" onClick={memoryRead}>Mr</button>
+                    </div>
+                </div>
             </Fragment>
         );
 }

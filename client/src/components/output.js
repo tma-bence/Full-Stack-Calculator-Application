@@ -38,8 +38,8 @@ const Output = () => {
                 <div className="mt-2">
                     <p>Previous result: {data}</p>
                 </div>
-                <button className="btn btn-success" onClick={loadResult}>Load result</button>
-                <button className="btn btn-success ml-2" onClick={saveResult}>Save result</button>
+                <button className="btn btn-dark" onClick={loadResult}>Load result</button>
+                <button className="btn btn-dark ml-2" onClick={saveResult}>Save result</button>
             </form>
         </Fragment>
     );
