@@ -1,8 +1,28 @@
 const express = require('express');
+const { json } = require('express/lib/response');
 
 const app = express();
 
+global.memory = '';
+
 app.use(express.json());
+
+app.post('/api/mem', async(req, res) => {
+    try {
+        memory = (req.body.data);
+        console.log(memory);
+    } catch (err) {
+        console.log(err.message);
+    }
+})
+
+app.get('/api/mem', async(req, res) => {
+    try {
+        res.json(memory);
+    } catch (err) {
+        console.log(err.message);
+    }
+})
 
 app.post('/api/calc', async(req, res) => {
     try {
